@@ -1,0 +1,68 @@
+body {
+    font-family: Monospace, Arial, sans-serif, system-ui;
+  }
+     
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 60px;
+  }
+     
+  #guess-input {
+    display: block;
+    font-weight: bold;
+    border-radius: 3px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    font-size: 18px;
+    width: 250px;
+    border: 3px solid #000000;
+  }
+     
+  #guess-button {
+    font-family: Monospace, Arial, sans-serif, system-ui;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 25px;
+    background-color: #FF0000;
+    color: #fff;
+    border: 3px solid #000000;
+    border-radius: 3px;
+  }
+     
+  button:active {
+      transform: scale(0.95);
+  }
+     
+  .letter {
+      font-size: 35px;
+      font-weight: bold;
+      border: 3px solid #000000;
+      border-radius: 3px;
+      padding: 12px;
+      margin: 5px;
+      min-width: 20px;
+      text-align: center;
+      display: inline-block;
+  }
+     
+  .row{
+      margin-bottom: 10px;
+      margin-top: 20px;
+      text-align: center;
+  }
+     
+  .input-area{
+      margin: 30px;
+  }
+
+  [data-emoji] {
+    font-style: normal;
+    font-weight: normal;
+  }
+  [data-emoji]:before {
+    content: attr(data-emoji);
+    margin-right: .125em;
+  }
