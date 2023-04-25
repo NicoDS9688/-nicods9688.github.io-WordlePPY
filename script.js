@@ -1,4 +1,4 @@
-let dictionary = ['APPLE', 'HURLS', 'WINGS', 'YOUTH'];
+let dictionary = ['APPLE', 'HURLS', 'WINGS', 'YOUTH', 'ARROW', 'HOUSE', 'FORCE', 'BREAD', 'BREAK', 'AGENT'];
 let attempts= 5;
 const word = dictionary[Math.floor(Math.random() * dictionary.length)];
 
