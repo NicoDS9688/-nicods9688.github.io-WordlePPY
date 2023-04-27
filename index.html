@@ -7,10 +7,13 @@
    </head>
    <body>
      <h1>Wordle PPY</h1>
-     <input type="text" id="guess-input">
+     <div id= "main">
+     <input type="text" id="guess-input" placeholder="Type a word with 5 letters."/>
      <button id="guess-button">CHECK</button>
+     <button class= "resetButton" onclick="resetAttempt()">RESET</button>
      <div id="grid"></div>
      <p id="guesses"></p>
+    </div>
       <!---<i data-emoji="🎉"></i>--->
       <!---<i data-emoji="💩"></i>--->
    </body>

@@ -1,6 +1,15 @@
-let dictionary = ['APPLE', 'HURLS', 'WINGS', 'YOUTH', 'ARROW', 'HOUSE', 'FORCE', 'BREAD', 'BREAK', 'AGENT'];
 let attempts= 5;
-const word = dictionary[Math.floor(Math.random() * dictionary.length)];
+let word = 'APPLE';
+const API = 'https://random-word-api.vercel.app/api?words=1&length=5&type=uppercase';
+
+
+// FUNCIÓN ASÍNCRONA
+fetch(API).then(response => response.json())
+.then(response => {
+    word = response[0].toUpperCase()
+    console.log(word);
+})
+.catch( err => console.log(['APPLE', 'HURLS', 'WINGS', 'YOUTH', 'ARROW', 'HOUSE', 'FORCE', 'BREAD', 'BREAK', 'AGENT']))
 
 
 window.addEventListener('load', init);
@@ -66,6 +75,10 @@ function checkAttempt(){
     let attempt = document.getElementById("guess-input");
     attempt = attempt.value;
     attempt = attempt.toUpperCase();
+    if (attempt === "" || attempt.length < 5) {
+        const missingLetters = 5 - attempt.length;
+        attempt += "?".repeat(missingLetters);
+    }
     return attempt;
 }
 
@@ -77,4 +90,6 @@ function finish(message){
     container.innerHTML = message;
 }
 
-
+function resetAttempt() {
+    location.reload();
+}

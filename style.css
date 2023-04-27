@@ -1,18 +1,35 @@
 body {
     font-family: Monospace, Arial, sans-serif, system-ui;
+    background-color: #FFFF00;
+    color: #ffffff;
   }
      
   h1 {
     text-align: center;
-    margin-top: 50px;
-    font-size: 60px;
+    margin-top: 30px;
+    font-size: 50px;
+    color: #000000;
   }
-     
+
+  #main {
+    background-color: #ffffff;
+    width: 400px;
+    height: 750px;
+    position: absolute;
+    inset: 0;
+    margin: 110px auto;
+    border: 3px solid #000000;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+        0 10px 10px rgba(0,0,0,0.22);
+  }
+
   #guess-input {
     display: block;
     font-weight: bold;
     border-radius: 3px;
-    margin: 0 auto 20px;
+    margin: 35px auto 20px;
     padding: 20px;
     font-size: 18px;
     width: 250px;
@@ -24,12 +41,13 @@ body {
     font-weight: bold;
     display: block;
     margin: 0 auto;
-    padding: 10px 20px;
+    padding: 5px 10px;
     font-size: 25px;
     background-color: #FF0000;
     color: #fff;
     border: 3px solid #000000;
     border-radius: 3px;
+    cursor: pointer;
   }
      
   button:active {
@@ -37,11 +55,12 @@ body {
   }
      
   .letter {
-      font-size: 35px;
+      color: #000000;
+      font-size: 25px;
       font-weight: bold;
       border: 3px solid #000000;
       border-radius: 3px;
-      padding: 12px;
+      padding: 10px;
       margin: 5px;
       min-width: 20px;
       text-align: center;
@@ -65,4 +84,16 @@ body {
   [data-emoji]:before {
     content: attr(data-emoji);
     margin-right: .125em;
+  }
+
+  .resetButton {
+    background-color: darkorange;
+    font-family: Monospace, Arial, sans-serif, system-ui;
+    font-weight: bold;
+    margin: 5px auto;
+    font-size: 18px;
+    border-radius: 3px;
+    border: 3px solid #000000;
+    margin-left: 41%;
+    cursor: pointer;
   }
